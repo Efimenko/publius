@@ -1,3 +1,4 @@
+// открытие/закрытие меню
 $('.burger').click(function(){
 	var burger = $(this),
 	nav = '#'+burger.attr('data-nav');

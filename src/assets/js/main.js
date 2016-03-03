@@ -3,12 +3,15 @@
 //= ../../../bower_components/slick-carousel/slick/slick.min.js
 //= ../../../bower_components/jquery-touch-events/src/1.0.1/jquery.mobile-events.min.js
 $(function(){
+	// прелоадер
 	$(window).on('load', function () {
 	    var $preloader = $('#preloader'),
 	        $spinner   = $preloader.find('.spinner');
 	    $spinner.fadeOut();
 	    $preloader.delay(350).fadeOut('slow');
 	});
+
+	// смена структуры страниц
 	function changePlace(){
 		if ($(window).width() <= 750) {
 			if (!$('.header .nav-list').next().hasClass('header__search-wrapper')) {
@@ -52,7 +55,6 @@ $(function(){
 
 	// safari fix
 	var plug = navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0;
-
 	if (plug){
 		$('.book_mini .book__info, .book__buy .btn').css('margin-left', -4);
 	}

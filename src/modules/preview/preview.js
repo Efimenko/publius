@@ -1,8 +1,10 @@
+// добавление квадратика к заголовку
 $('.preview__title').each(function(){
 	$(this).css('color', $(this).attr('data-color'));
 	$(this).append('<i class="preview__dot" style="background:'+$(this).attr('data-color')+'"></i>');
 });
 
+// раздача классов превью в зависимости от их размера
 function previewClass(){
 	$('.preview_hover').each(function(){
 		if ($(this).find('.preview__info').innerHeight() > 120) {
@@ -13,6 +15,7 @@ function previewClass(){
 	});
 }
 
+// конструктор слайдера для превью на главной
 function constructSlider(el){
 	if ($(window).width() <= 767) {
 		if (!$(el).hasClass('slick-slider')) {

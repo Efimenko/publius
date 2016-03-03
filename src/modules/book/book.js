@@ -1,4 +1,3 @@
-
 $.fn.titleHeight = function () {
     $(this).each(function(){
 		if ($(this).find('.book__title').height() > 53) {
@@ -14,6 +13,7 @@ $.fn.bookAbs = function () {
 	});
 }
 
+// расположение плашки обновления
 function bookUpdate(){
 	$('.book__info').each(function(){
 		console.log($(this).position().top)
@@ -31,6 +31,7 @@ function bookUpdate(){
 	});
 }
 
+// обрезка описания книги
 function anotationHeight(){
 	$('.book_mini').titleHeight();
 	$('.book_mini').bookAbs();
@@ -57,5 +58,4 @@ function anotationHeight(){
 }
 
 setTimeout(bookUpdate,300);
-
 anotationHeight();

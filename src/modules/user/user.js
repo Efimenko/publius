@@ -1,9 +1,11 @@
+// открытие меню пользователя
 if ($(window).width() > 767) {
 	$('.user__avatar').click(function(){
 		$(this).toggleClass('user__avatar_active').siblings('.user-menu').stop().fadeToggle(300);
 	});
 };
 
+// закрытие меню пользователя при клике вне его области
 $(document).click(function(event) {
 	if ($(window).width() > 767 && $('.user-menu').css('opacity') == '1') {
 		console.log('1')

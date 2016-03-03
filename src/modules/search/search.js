@@ -1,3 +1,4 @@
+// увеличении/уменьшение поля поиска в хедере
 function serachField(){
 	var inputSearchWidth = $('.search__field').parents('.search').outerWidth();
 
@@ -23,6 +24,7 @@ function serachField(){
 
 serachField();
 
+// смена текста кнопки в хедере
 function searchBtnText(){
 	if ($(window).width() < 750) {
 		if ($('.search-wrapper__btn').html() != 'загрузить<br>книгу') {

@@ -14,6 +14,7 @@ $('#carousel').on('afterChange', function(){
 	$('.carousel-wrapper').css('background-image', 'url('+$('#carousel .slick-current .preview img').attr('src')+')');
 });
 
+// выравнивание дотсов
 function dotsLeft(){
 	if ($(window).width() > 767) {
 		$('#carousel .slick-dots').css('left', $('#carousel .book__preview-wrapper').outerWidth()+100);

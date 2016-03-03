@@ -1,3 +1,4 @@
+// установка высоты навигаци в зависимости от меню пользователя
 function headerNavHeight(){
 	if ($(window).width() <= 767) {
 		$('.search-wrapper__btn').width($('.header__nav').width() - $('.header__user').outerWidth() + 15);
@@ -14,7 +15,7 @@ function headerNavHeight(){
 }
 
 
-
+// закрытие меню при свайпе вверх
 $('body').on('swipeup', function(e) { 
 	if ($('.header__burger').hasClass('burger_active')) {
 	    $('.burger').removeClass('burger_active');

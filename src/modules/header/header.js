@@ -1,12 +1,4 @@
-$(window).scroll(function(){
-	if ($(window).scrollLeft() > 0) {
-		var ml = '-'+$(window).scrollLeft()+'px';
-		$('.header').css('margin-left',ml)
-	}else{
-		$('.header').css('margin-left', '')
-	}
-});
-
+// закрытие меню при клике вне его области
 $(document).click(function(event) {
 	if ($(window).width() <= 750) {
 		if ($(event.target).closest(".header").length) return;
@@ -17,6 +9,7 @@ $(document).click(function(event) {
 	};
 });
 
+// удаление патерна при ресайзе
 function bodyOverflow(){
 	if ($(window).width() > 750) {
 		$('body').removeClass('pattern');

@@ -1,3 +1,4 @@
+// смена места пагинации на моб версии
 function paginationPlace(){
 	if ($(window).width() <= 767) {
 		$('.pagination-wrapper .pagination').each(function(){
