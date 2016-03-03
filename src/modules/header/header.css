@@ -1,0 +1,129 @@
+.header{
+	// padding-left: 25px;
+	// padding-right: 25px;
+	// min-height: 108px;
+	background: var(--bgColor);
+	padding-top: 25px;
+	padding-bottom: 27px;
+	clear: fix;
+	// min-width: 1366px;
+	z-index: 1000;
+	box-shadow: 0 0 7px rgba(24,24,25,.5);
+	@media (min-width: 768px){
+		height: 156px;	
+	}
+	@media (min-width: 1100px){
+		height: 113px;
+	}
+	@media (max-width: 767px){
+		padding-top: 0;
+		padding-bottom: 0;
+		min-height: 51px;
+	}
+	@nest &__container{
+		max-width: 1317px;
+		margin: auto;
+		clear: fix;
+	}
+	@nest &__logo{
+		float: left;
+		margin-right: 52px;
+		@media (max-width: 1365px){
+			margin-right: 20px;
+		}
+		@media (max-width: 767px){
+			margin-top: 10px;
+			margin-bottom: 13px;
+			margin-left: 15px;
+		}
+	}
+	@nest &__nav{
+		float: left;
+		margin-right: 61px;
+		margin-top: 15px;
+		@media (max-width: 1365px){
+			margin-right: 20px;
+			font-size: 15px;
+		}
+		@media (max-width: 1099px){
+			float: right;
+		}
+		@media (max-width: 767px){
+			display: none;
+			float: none;
+			clear: both;
+			margin-right: 0;
+			padding-left: 15px;
+			margin-top: 0;
+		}
+		@nest & .nav-list{
+			@media (max-width: 767px){
+				padding-right: 203px;
+			}
+		}
+	}
+	@nest &__search{
+		@nest &-wrapper{
+			float: left;
+			width: 358px;
+			top: -5px;
+			position: relative;
+			margin-right: 27px;
+			min-height: 61px;
+			@media (max-width: 1365px){
+				margin-right: 15px;
+				width: 308px;
+			}
+			@media (max-width: 767px){
+				width: 293px;
+			}
+			@media (max-width: 767px){
+				width: auto;
+				margin-left: -15px;
+			}
+		}
+	}
+	@nest &__user{
+		float: left;
+		width: 246px;
+		@media (max-width: 1365px){
+			width: 196px;
+			position: relative;
+			top: 3px;
+		}
+		@media (max-width: 767px){
+			display: block;
+			float: none;
+			position: absolute !important;
+			top: 43px;
+			right: 0;
+			width: 203px;
+			background: #e7e3de;
+			padding-top: 15px;
+			padding-left: 15px;
+		}
+	}
+	@nest &__burger{
+		float: right;
+		margin-top: 15px;
+	}
+	@nest &__side{
+		float: left;
+		clear: fix;
+		@media (max-width: 1099px){
+			float: none;
+		}
+		@nest &_right{
+			@media (max-width: 1099px){
+				max-width: 521px;
+				margin: auto;
+			}
+		}
+	}
+	@nest &_fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}

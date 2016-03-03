@@ -1,0 +1,163 @@
+.carousel{
+	padding-left: 65px;
+	padding-right: 65px;
+	position: relative;
+	z-index: 3;
+	@media (max-width: 767px){
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 290px;
+		margin: auto;
+	}
+	@nest &-title{
+		text-align: center;
+		color: #fff;
+		font-size: 18px;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		position: relative;
+		z-index: 20;
+		display: none;
+		@media (max-width: 767px){
+			display: block;
+		}
+	}
+	@nest &-wrapper{
+		padding-top: 30px;
+		padding-bottom: 30px;
+		// background-color: #5a799a;
+		background-repeat: no-repeat;
+		background-size: 400%;
+		position: relative;
+		overflow: hidden;
+		transition: all 300ms;
+		@media (max-width: 767px){
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		@nest &:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.4);
+			// filter: blur(5px);
+			z-index: 2;
+		}
+	}
+	@nest & .slick-list{
+		@media (max-width: 767px){
+			padding-top: 16px;
+		}
+	}
+	@nest & .slick-arrow{
+		background-color: transparent;
+		font-size: 0;
+		border: 0;
+		outline: none;
+		position: absolute;
+		top: 50%;
+		@media (max-width: 767px){
+			display: none !important;
+		}
+		@nest &:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transition: opacity 400ms;
+		}
+		@nest &:hover{
+			@nest &:after{
+				opacity: 1;
+			}
+		}
+		@nest &.slick-prev{
+			background: resolve('left-sl.svg');
+			background-repeat: no-repeat;
+			width: 46px;
+			height: 91px;
+			left: 0;
+			transform: translateY(-50%);
+			@nest &:after{
+				transform: translateY(-50%);
+				width: 46px;
+				height: 91px;
+				background: resolve('left-sl_h.svg');
+				background-repeat: no-repeat;
+			}
+		}
+		@nest &.slick-next{
+			background: resolve('right-sl.svg');
+			background-repeat: no-repeat;
+			width: 46px;
+			height: 91px;
+			right: 0;
+			transform: translateY(-50%);
+			@nest &:after{
+				transform: translateY(-50%);
+				width: 46px;
+				height: 91px;
+				background: resolve('right-sl_h.svg');
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	@nest & .book__desc{
+		@media (max-width: 767px){
+			display: none;
+		}
+	}
+}
+.slick-dots{
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 37px;
+	@media (max-width: 767px){
+		transform: translateX(-50%);
+		bottom: 8px;
+	}
+	@nest & button{
+		font-size: 0;
+		border: 0;
+		border-radius: 50%;
+		width: 10px;
+		padding: 0;
+		height: 9px;
+		background: #bbb1a1;
+		transition: all 300ms;
+		outline: none;
+		@media (max-width: 767px){
+			width: 6px;
+			height: 6px;
+		}
+	}
+	@nest & li{
+		display: inline-block;
+		margin-right: 13px;
+		vertical-align: middle;
+		@media (max-width: 767px){
+			margin-right: 10px;
+		}
+		@nest &:last-child{
+			margin-right: 0;
+		}
+		@nest &.slick-active{
+			@nest & button{
+				width: 13px;
+				height: 13px;
+				background: var(--mainColor);
+				@media (max-width: 767px){
+					width: 8px;
+					height: 8px;
+				}
+			}
+		}
+	}
+}

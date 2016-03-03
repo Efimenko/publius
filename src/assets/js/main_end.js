@@ -1,0 +1,13 @@
+	$(window).resize(function(){
+		serachField();
+		dotsLeft();
+		changePlace();
+		bookUpdate();
+		anotationHeight();
+		paginationPlace();
+		constructSlider('#previews');
+		bodyOverflow();
+		headerNavHeight();
+		searchBtnText();
+	});
+});

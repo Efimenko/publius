@@ -1,0 +1,45 @@
+.stats{
+	text-align: center;
+	@nest &__item{
+		display: inline-block;
+		font-size: 10px;
+		color: #8a7a61;
+		margin-right: 15px;
+		@nest &:last-child{
+			margin-right: 0;
+		}
+		@nest & i{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 4px;
+			transform: scale(.8);
+		}
+		@nest &_likes{
+			@nest & i{
+				background: resolve('like.svg');
+				background-repeat: no-repeat;
+				width: 13px;
+				height: 12px;
+			}
+		}
+		@nest &_views{
+			@nest & i{
+				background: resolve('view.svg');
+				background-repeat: no-repeat;
+				width: 19px;
+				height: 16px;
+			}
+		}
+		@nest &_comments{
+			@nest & i{
+				background: resolve('comment.svg');
+				background-repeat: no-repeat;
+				width: 13px;
+				height: 13px;
+			}
+		}
+	}
+	@nest &_inline{
+		display: inline-block;
+	}
+}

@@ -1,0 +1,64 @@
+.section{
+	padding-top: 40px;
+	padding-bottom: 10px;
+	@media (max-width: 767px){
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+	@nest &-title{
+		color: #8a7a61;
+		text-transform: uppercase;
+		font-size: 30px;
+		position: relative;
+		margin-bottom: 1em;
+		@media (max-width: 767px){
+			font-size: 18px;
+			text-align: center;
+		}
+		@nest &:after{
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			width: 2.158em;
+			left: 0;
+			height: 1px;
+			background: #8a7a61;
+			@media (max-width: 767px){
+				left: 50%;
+				margin-left: -1.079em;
+			}
+		}
+		@nest &_bigmargin{
+			margin-bottom: 1.737em;
+			@nest &+.pagination{
+				@media (max-width: 767px){
+					margin-top: -30px;
+				}
+			}
+		}
+		@nest &_minimargin{
+			margin-bottom: 0.5em;
+			@nest &+.pagination{
+				@media (max-width: 767px){
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	@nest &_light{
+		background: var(--bgColorLight);
+	}
+	@nest &_morepadding{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@media (max-width: 767px){
+			padding-top: 23px;
+			padding-bottom: 23px;
+		}
+	}
+	@nest &_previews{
+		@media (max-width: 767px){
+			padding-bottom: 10px;
+		}
+	}
+}

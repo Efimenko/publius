@@ -1,0 +1,19 @@
+.btn{
+	border: 0;
+	background: var(--mainColor);
+	transition: background 400ms;
+	color: #fff;
+	font-family: var(--hFont);
+	font-size: 18px;
+	border-radius: 0;
+	box-shadow: 0 0 7px rgba(24,24,25,.5);
+	text-transform: uppercase;
+	padding: 4px 20px 8px;
+	line-height: 22px;
+	outline: none;
+	@nest &:--hover{
+		background: var(--mainColorHover);
+		color: #fff;
+		outline: none !important;
+	}
+}

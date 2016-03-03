@@ -1,0 +1,143 @@
+.pagination{
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+	float: right;
+	margin-right: 22px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #8a7a61;
+	@media (max-width: 767px){
+		float: none;
+		display: block;
+		text-align: center;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		margin-right: 0;
+	}
+	@nest &-wrapper{
+		clear: fix;
+		@nest & .section-title{
+			display: inline-block;
+			@media (max-width: 767px){
+				display: block;
+			}
+		}
+	}
+	@nest &__item{
+		padding-left: 8px;
+		padding-right: 8px;
+		vertical-align: middle;
+		display: inline-block !important;
+		transition: color 400ms;
+		@nest &:hover{
+			color: var(--mainColor);
+		}
+		@nest &_current{
+			font-size: 24px;
+			color: var(--mainColor);
+		}
+		@nest & a{
+			padding: 2px !important;
+			border: 0 !important;
+			float: none !important;
+			margin: 0 !important;
+			background-color: transparent !important;
+		}
+	}
+	@nest &__btn{
+		height: 20px;
+		display: inline-block !important;
+		font-size: 0;
+		@nest & button{
+			background-color: transparent;
+			border: 0;
+			outline: none;
+			padding: 0;
+		}
+		@nest &_prev{
+			margin-right: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			@nest & button{
+				position: relative;
+				padding: 2px;
+				width: 24px;
+				height: 15px;
+				@nest &:before{
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -10px;
+					margin-left: -5px;
+					background: resolve('left.svg');
+					background-repeat: no-repeat;
+					width: 11px;
+					height: 20px;
+				}
+				@nest &:after{
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -10px;
+					margin-left: -5px;
+					background: resolve('left_h.svg');
+					background-repeat: no-repeat;
+					width: 11px;
+					height: 20px;
+					transition: opacity 400ms;
+					opacity: 0;
+				}
+				@nest &:hover{
+					@nest &:after{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		@nest &_next{
+			margin-left: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			@nest & button{
+				position: relative;
+				padding: 2px;
+				width: 24px;
+				height: 15px;
+				@nest &:before{
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -10px;
+					margin-left: -5px;
+					background: resolve('right.svg');
+					background-repeat: no-repeat;
+					width: 11px;
+					height: 20px;
+				}
+				@nest &:after{
+					content: '';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -10px;
+					margin-left: -5px;
+					background: resolve('right_h.svg');
+					background-repeat: no-repeat;
+					width: 11px;
+					height: 20px;
+					transition: opacity 400ms;
+					opacity: 0;
+				}
+				@nest &:hover{
+					@nest &:after{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

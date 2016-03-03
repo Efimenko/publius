@@ -1,0 +1,42 @@
+.footer{
+	background: #3b3a36;
+	padding-top: 45px;
+	padding-bottom: 55px;
+	@media (max-width: 767px){
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	@nest &__logo{
+		width: 105px;
+		display: inline-block;
+		@media (max-width: 767px){
+			display: none;
+		}
+	}
+	@nest &__copy{
+		font-size: 14px;
+		margin-top: 5px;
+		color: #7c7c7c;
+		@media (max-width: 991px){
+			font-size: 13px;
+		}
+		@media (max-width: 767px){
+			font-size: 8.3px;
+		}
+	}
+	@nest &__side{
+		@nest &_right{
+			text-align: right;
+			@media (max-width: 767px){
+				text-align: center;
+			}
+		}
+	}
+	@nest &__social{
+		margin-top: 30px;
+		@media (max-width: 767px){
+			margin-top: 5px;
+		}
+	}
+}
