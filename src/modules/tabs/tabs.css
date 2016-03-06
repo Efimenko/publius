@@ -1,0 +1,53 @@
+.tabs{
+	@nest &-list{
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+		text-align: right;
+		color: #8a7a61;
+		font-size: 14px;
+		position: relative;
+		@nest &:after{
+			content: '';
+			position: absolute;
+			height: 4px;
+			background: #dbd5ca;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9;
+		}
+		@nest & button{
+			border: 0;
+			background: transparent;
+			outline: none;
+			line-height: 26px;
+			padding: 0;
+			transition: color 300ms;
+			@nest &:hover{
+				color: var(--mainColor);
+			}
+		}
+		@nest &__item{
+			display: inline-block;
+			margin-left: 20px;
+			padding-right: 20px;
+			position: relative;
+			z-index: 10;
+			@nest &_active{
+				@nest & button{
+					color: var(--mainColor);
+					border-bottom: 4px solid var(--mainColor);
+				}
+			}
+		}
+	}
+	@nest &__content{
+		opacity: 0;
+		transition: opacity 300ms;
+		padding-top: 30px;
+		@nest &_active{
+			opacity: 1;
+		}
+	}
+}

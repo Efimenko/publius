@@ -138,6 +138,16 @@ a:focus, a:active{
 }
 
 .content{
+	min-height: 100%;
+	padding-bottom: 179px;
+	@nest &__side{
+		display: table-cell;
+		width: 1%;
+	}
+	@nest &__main{
+		display: table-cell;
+		padding-bottom: 70px;
+	}
 	@nest &_forfix{
 		padding-top: 108px;
 		@media (max-width: 991px){

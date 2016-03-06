@@ -34,9 +34,9 @@ function bookUpdate(){
 // обрезка описания книги
 function anotationHeight(){
 	$('.book_mini').titleHeight();
-	$('.book_mini').bookAbs();
+	$('.book_mini').not('.book_search').bookAbs();
 	setTimeout(function(){
-		$('.book_mini .book__info').each(function(){
+		$('.book_mini .book__info').not('.book_search .book__info').each(function(){
 			var hBookInfo = $(this).height(),
 			x = $(this).find('.book__author').height(),
 			y = $(this).find('.book__title').height() + parseInt($(this).find('.book__title').css('margin-top')) + parseInt($(this).find('.book__title').css('margin-bottom')) + $(this).children('.preview__category').height(),
@@ -56,6 +56,10 @@ function anotationHeight(){
 		});
 	},450);
 }
+
+$('.book__buy-action_complete').click(function(){
+	return false;
+});
 
 setTimeout(bookUpdate,300);
 anotationHeight();

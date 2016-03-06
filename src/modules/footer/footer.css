@@ -2,6 +2,7 @@
 	background: #3b3a36;
 	padding-top: 45px;
 	padding-bottom: 55px;
+	margin-top: -179px;
 	@media (max-width: 767px){
 		text-align: center;
 		padding-top: 20px;

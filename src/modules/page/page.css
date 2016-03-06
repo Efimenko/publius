@@ -1,0 +1,11 @@
+.page{
+	@nest &-title{
+		background: #faf4eb;
+		color: #8a7a61;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-top: 50px;
+		margin-bottom: 45px;
+	}
+}

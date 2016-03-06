@@ -9,5 +9,6 @@
 		bodyOverflow();
 		headerNavHeight();
 		searchBtnText();
+		adaptiveFooter();
 	});
 });

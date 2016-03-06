@@ -197,6 +197,25 @@
 		right: 16px;
 		font-size: 0;
 		@nest & .btn{
+			padding: 0;
+			font-size: 0;
+			font-family: var(--mainFont);
+			@nest &:hover{
+				@nest & span{
+					background: var(--mainColorHover);
+					color: #fff;
+				}
+			}
+			@nest & span{
+				font-size: 16px;
+				@nest & i{
+					font-style: normal;
+					font-size: 22px;
+					line-height: 51px;
+				}
+			}
+		}
+		@nest &-icon{
 			display: inline-block;
 			width: 51px;
 			height: 51px;
@@ -215,21 +234,19 @@
 				height: 23px;
 				left: 50%;
 				top: 50%;
-				margin-top: -11px;
-				margin-left: -11px;
+				margin-top: -12px;
+				margin-left: -10px;
 			}
 		}
 		@nest & span{
 			display: inline-block;
-			line-height: 51px;
 			background: #fff;
 			padding-left: 15px;
 			padding-right: 15px;
 			text-align: center;
 			vertical-align: middle;
-			font-size: 22px;
 			color: var(--mainColor);
-			box-shadow: 0 0 7px rgba(24,24,25,.5);
+			transition: all 400ms;
 			@media (max-width: 767px){
 				line-height: 40px;
 			}
@@ -240,6 +257,117 @@
 			transform: translateX(-50%);
 			border: 1px solid #d9d8d8;
 			box-shadow: none !important;
+		}
+		@nest &-content{
+			display: inline-block;
+			@media (max-width: 991px){
+				display: block;
+				position: relative;
+				top: 2px;
+			}
+			@nest & i{
+				@media (max-width: 991px){
+					line-height: 28px !important;
+				}
+			}
+		}
+		@nest &-action{
+			font-size: 14px;
+			color: var(--mainColor) !important;
+			display: inline-block;
+			margin-right: 20px;
+			position: relative;
+			top: -8px;
+			transition: color 300ms;
+			@nest &:hover{
+				text-decoration: none;
+				color: var(--mainColorHover) !important;
+			}
+			@nest &_complete{
+				color: #549500 !important;
+				cursor: default;
+				@nest &:hover{
+					color: #549500 !important;
+				}
+			}
+		}
+		@nest &-discount{
+			display: inline-block;
+			margin-left: 15px;
+			font-size: 17px;
+			color: #cec3b2;
+			text-transform: uppercase;
+			position: relative;
+			@media (max-width: 991px){
+				margin-left: 0;
+				font-size: 14px;
+			}
+			@nest & span{
+				font-size: 12.3px !important;
+				padding: 0 !important;
+				color: #cec3b2 !important;
+				@media (max-width: 991px){
+					font-size: 14px !important;
+				}
+			}
+			@nest &:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				height: 1px;
+				background: #ff0000;
+				top: 45%;
+			}
+		}
+		@nest &_card{
+			@nest & span{
+				text-transform: uppercase;
+				font-size: 16px;
+				line-height: 49px;
+				@nest & i{
+					font-style: normal;
+					font-size: 21px;
+				}
+			}
+			@nest & .book__buy-icon{
+				@nest &:after{
+					background: resolve('card.png');
+					width: width('card.png');
+					height: height('card.png');
+					margin-top: -9.5px;
+					margin-left: -13.5px;
+				}
+			}
+		}
+		@nest &_withdiscount{
+			@nest & .btn span{
+				@media (max-width: 991px){
+					text-align: left;
+				}
+			}
+		}
+		@nest &_read{
+			@nest & .book__buy-icon{
+				@nest &:after{
+					content: '';
+					position: absolute;
+					background: resolve('book.svg');
+					background-repeat: no-repeat;
+					width: 33px;
+					height: 23px;
+					left: 50%;
+					top: 50%;
+					margin-top: -11px;
+					margin-left: -16px;
+					@media (max-width: 767px){
+						width: 24px;
+						height: 17px;
+						margin-top: -8px;
+						margin-left: -12px;
+					}
+				}
+			}
 		}
 	}
 	@nest &__more{
@@ -264,6 +392,96 @@
 		}
 		@media (max-width: 767px){
 			display: none;
+		}
+	}
+	@nest &__status{
+		position: absolute;
+		font-size: 14px;
+		color: #8a7a61;
+		font-style: italic;
+		font-family: var(--tFont);
+		top: 5px;
+		right: 8px;
+		@nest &:before{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 3px;
+		}
+		@nest &_draft{
+			@nest &:before{
+				background: resolve('draft.png');
+				width: width('draft.png');
+				height: height('draft.png');
+				position: relative;
+				top: -2px;
+			}
+		}
+		@nest &_complete{
+			@nest &:before{
+				background: resolve('complete.png');
+				width: width('complete.png');
+				height: height('complete.png');
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	@nest &__label{
+		position: absolute;
+		top: 33px;
+		left: -28px;
+		line-height: 27px;
+		transform: rotate(-90deg);
+		background: #e09616;
+		color: #fff;
+		font-size: 16.7px;
+		padding-left: 10px;
+		padding-right: 10px;
+		@nest &:before{
+			content: '';
+			position: absolute;
+			height: 11px;
+			width: 4px;
+			top: 0;
+			left: -6px;
+			border: 4px solid transparent;
+			border-bottom: 8px solid #9a6202;
+			border-right: 2px solid #9a6202;
+		}
+		@nest &:after{
+			content: '';
+			position: absolute;
+			height: 11px;
+			width: 4px;
+			top: 0;
+			right: -6px;
+			border: 4px solid transparent;
+			border-bottom: 8px solid #9a6202;
+			border-left: 2px solid #9a6202;
+		}
+		@nest &_save{
+			width: 28px;
+			height: 28px;
+			background: #549500;
+			left: -12px;
+			@nest &:after{
+				border-bottom: 8px solid #376300;
+				border-left: 2px solid #376300;
+			}
+			@nest &:before{
+				border-bottom: 8px solid #376300;
+				border-right: 2px solid #376300;
+			}
+			@nest & i{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%) rotate(90deg);
+				background: resolve('save.png');
+				width: width('save.png');
+				height: height('save.png');
+			}
 		}
 	}
 	@nest &_transparent{
@@ -424,6 +642,70 @@
 					transform: translateX(-50%);
 				}
 			}
+		}
+	}
+	@nest &_search{
+		margin-top: 75px;
+		padding-left: 0;
+		padding-right: 0;
+		@nest & .book__info{
+			width: 100%;
+			padding-left: 190px;
+			min-height: 260px;
+			height: auto;
+		}
+		@nest & .preview-wrapper{
+			position: absolute;
+			left: 25px;
+			top: -25px;
+		}
+		@nest & .preview{
+			width: 140px;
+		}
+		@nest & .preview__title{
+			font-size: 16px;
+			margin-bottom: 38px;
+		}
+		@nest & .preview__author{
+			font-size: 9px;
+		}
+		@nest & .preview__info{
+			padding-bottom: 9px;
+			padding-top: 8px;
+			top: 104%;
+			@nest &:before{
+				transform: scale(0.7);
+				top: -8px;
+			}
+			@nest &:after{
+				transform: scale(0.7);
+				bottom: -8px;
+			}
+		}
+		@nest & .preview__dot{
+			bottom: -20px;
+			width: 4px;
+			height: 4px;
+		}
+		@nest & .stats{
+			position: relative;
+			z-index: 100;
+			margin-top: 15px;
+			@nest &__item{
+				font-size: 12px;
+				@nest & i{
+					transform: scale(1);
+				}
+				@nest &_views{
+					@nest & i{
+						position: relative;
+						top: -1px;
+					}
+				}
+			}
+		}
+		@nest & .book__buy{
+			right: 30px;
 		}
 	}
 }

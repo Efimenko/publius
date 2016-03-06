@@ -1,0 +1,11 @@
+.checkbox{
+	margin-top: 0;
+	margin-bottom: 0;
+	display: none;
+	@nest &:checked + label{
+		color: var(--mainColor);
+		@nest &:after{
+			opacity: 1;
+		}
+	}
+}

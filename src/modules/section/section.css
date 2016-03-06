@@ -44,6 +44,11 @@
 				}
 			}
 		}
+		@nest &_bigline{
+			@nest &:after{
+				width: 307px;
+			}
+		}
 	}
 	@nest &_light{
 		background: var(--bgColorLight);

@@ -24,6 +24,9 @@
 				text-align: left;
 			}
 		}
+		@nest &_margin{
+			margin-bottom: 40px;
+		}
 	}
 	@nest &__link{
 		color: #aca395;
@@ -53,6 +56,9 @@
 		@nest &::placeholder{
 			color: #aca395;
 		}
+		@nest &_big{
+			height: 43px;
+		}
 	}
 	@nest &__button{
 		position: absolute;
@@ -65,6 +71,10 @@
 		outline: none;
 		border: 0;
 		@media (max-width: 767px){
+			bottom: 50%;
+			margin-bottom: -calc(height('search.png') / 2);
+		}
+		@nest &_center{
 			bottom: 50%;
 			margin-bottom: -calc(height('search.png') / 2);
 		}
@@ -86,6 +96,19 @@
 				height: 43px;
 			}
 		}
-
+	}
+	@nest &-results{
+		@nest &__top{
+			margin-bottom: 40px;
+		}
+		@nest &__counter{
+			font-size: 14px;
+			color: #aca395;
+		}
+	}
+	@nest &-bg{
+		background: #f7d97c;
+		padding-left: 2px;
+		padding-right: 2px;
 	}
 }

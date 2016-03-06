@@ -1,14 +1,14 @@
 // увеличении/уменьшение поля поиска в хедере
 function serachField(){
-	var inputSearchWidth = $('.search__field').parents('.search').outerWidth();
+	var inputSearchWidth = $('.search_mini').outerWidth();
 
 	if ($(window).width() > 750) {
-		$('.search__field').focus(function(){
+		$('.search_mini .search__field').focus(function(){
 			$(this).parents('.search').siblings('.btn').hide();
 			$(this).parents('.search').stop().animate({'width': '100%'},400)
 		});
 
-		$('.search__field').blur(function(){
+		$('.search_mini .search__field').blur(function(){
 			if (!$(this).parents('.search').siblings('.btn:visible').length) {
 				$(this).parents('.search').stop()
 				.animate(

@@ -140,4 +140,7 @@
 			}
 		}
 	}
+	@nest &_nomargin{
+		margin-right: 0;
+	}
 }
