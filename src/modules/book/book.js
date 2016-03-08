@@ -61,5 +61,5 @@ $('.book__buy-action_complete').click(function(){
 	return false;
 });
 
-setTimeout(bookUpdate,300);
+setTimeout(bookUpdate,700);
 anotationHeight();

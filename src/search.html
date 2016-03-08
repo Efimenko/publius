@@ -1,5 +1,5 @@
 //= template/head.html
-	<div class="page-title">
+	<div class="page-title nomobile">
 		<div class="container">
 			Расширенный поиск
 		</div>
@@ -15,6 +15,8 @@
 		<div class="content__side content__side_left sidebar">
 			<!-- begin filter  -->
 			<form class="filter sidebar__filter">
+				<button type="button" class="filter__btn"><i></i><span>Фильтры</span></button>
+				<button type="button" class="filter__block-btn">Жанры<i class="filter__arrow"></i></button>
 				<!-- begin filter__block  -->
 				<div class="filter__block">
 					<div class="section-title sidebar__section-title">Жанры</div>
@@ -148,6 +150,7 @@
 					<!-- end filter__item -->
 				</div>
 				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Доступность книги<i class="filter__arrow"></i></button>
 				<!-- begin filter__block -->
 				<div class="filter__block">
 					<div class="section-title sidebar__section-title">Доступность книги</div>
@@ -189,6 +192,7 @@
 					<!-- end filter__item -->
 				</div>
 				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Форма произведения<i class="filter__arrow"></i></button>
 				<!-- begin filter__block -->
 				<div class="filter__block">
 					<div class="section-title sidebar__section-title">Форма произведения</div>
@@ -230,6 +234,7 @@
 					<!-- end filter__item -->
 				</div>
 				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Популярность автора<i class="filter__arrow"></i></button>
 				<!-- begin filter__block -->
 				<div class="filter__block">
 					<div class="section-title sidebar__section-title">Популярность автора</div>
@@ -260,7 +265,7 @@
 				</div>
 				<!-- end filter__block -->
 				<!-- begin filter__block -->
-				<div class="filter__block">
+				<div class="filter__block filter__block_show">
 					<button class="filter__reset" type="button">Сбросить фильтры</button>
 				</div>
 				<!-- end filter__block -->
@@ -273,7 +278,7 @@
 			<div class="search-results">
 				<div class="search-results__top">
 					<span class="search-results__counter">Показано 15 из 786 совпадений</span>
-					<ul class="pagination pagination_nomargin">
+					<ul class="pagination pagination_nomargin nomobile">
 						<li class="pagination__btn pagination__btn_prev"><button type="button"></button></li>
 						<li class="pagination__item"><a href="#">1</a></li>
 						<li class="pagination__item pagination__item_current"><a href="#">2</a></li>

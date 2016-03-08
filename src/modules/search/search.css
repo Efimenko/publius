@@ -26,6 +26,10 @@
 		}
 		@nest &_margin{
 			margin-bottom: 40px;
+			@media (max-width: 767px){
+				margin-top: 13px;
+				margin-bottom: 15px;
+			}
 		}
 	}
 	@nest &__link{
@@ -100,10 +104,18 @@
 	@nest &-results{
 		@nest &__top{
 			margin-bottom: 40px;
+			@media (max-width: 767px){
+				margin-bottom: 15px;
+			}
 		}
 		@nest &__counter{
 			font-size: 14px;
 			color: #aca395;
+			@media (max-width: 767px){
+				text-align: center;
+				font-size: 9px;
+				display: block;
+			}
 		}
 	}
 	@nest &-bg{

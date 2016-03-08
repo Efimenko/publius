@@ -31,6 +31,26 @@ $(function(){
 					$(this).find('.stats').prepend($(this).find('.discussion__date'));
 				});
 			};
+
+			if ($('.book__status').length) {
+				$('.book__status').each(function(){
+					if (!$(this).parents('.book__buy').length) {
+						$(this).parents('.book').find('.book__buy').append($(this));
+					};
+				});
+			};
+
+			if ($('.book .stats').length) {
+				$('.book .stats').each(function(){
+					if (!$(this).parents('.book__info').length) {
+						$(this).parents('.book').find('.preview__category').after($(this));
+					};
+				});
+			};
+
+			if (!$('.content__main .filter').length) {
+				$('.content__main').append($('.filter'));
+			};
 		}else{
 			if ($('.header .nav-list').next().hasClass('header__search-wrapper')) {
 				$('.header__side_right').append($('.header__search-wrapper, .header__user'));
@@ -48,6 +68,26 @@ $(function(){
 				$('.discussion').each(function(){
 					$(this).prepend($(this).find('.discussion__date'));
 				});
+			};
+
+			if ($('.book__status').length) {
+				$('.book__status').each(function(){
+					if ($(this).parents('.book__buy').length) {
+						$(this).parents('.book__info').prepend($(this));
+					};
+				});
+			};
+
+			if ($('.book .stats').length) {
+				$('.book .stats').each(function(){
+					if ($(this).parents('.book__info').length) {
+						$(this).parents('.book').find('.preview-wrapper').append($(this));
+					};
+				});
+			};
+
+			if ($('.content__main .filter').length) {
+				$('.content__side.content__side_left').append($('.filter'));
 			};
 		}
 	}

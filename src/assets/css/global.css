@@ -147,6 +147,10 @@ a:focus, a:active{
 	@nest &__main{
 		display: table-cell;
 		padding-bottom: 70px;
+		@media (max-width: 767px){
+			display: block;
+			padding-bottom: 30px;
+		}
 	}
 	@nest &_forfix{
 		padding-top: 108px;

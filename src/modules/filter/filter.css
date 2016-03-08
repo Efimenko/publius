@@ -1,16 +1,120 @@
 .filter{
 	color: #8a7a61;
+	@media (max-width: 767px){
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		background: #faf6ee;
+		height: 444px;	
+	}
+	@nest &__btn{
+		background: #faf6ee;
+		border: 0;
+		outline: none;
+		text-transform: uppercase;
+		border-top: 2px solid #c5c2be;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		display: block;
+		width: 100%;
+		color: #8a7a61;
+		font-size: 18.8px;
+		cursor: pointer;
+		display: none;
+		@media (max-width: 767px){
+			display: block;
+		}
+		@nest & i{
+			display: block;
+			margin: 0 auto 4px;
+			background: resolve('filter_up.png');
+			width: width('filter_up.png');
+			height: height('filter_up.png');
+		}
+		@nest & span{
+			@nest &:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				background: resolve('filter-icon.png');
+				width: width('filter-icon.png');
+				height: height('filter-icon.png');
+				margin-right: 3px;
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
 	@nest &__block{
 		margin-bottom: 40px;
+		@media (min-width: 768px){
+			display: block !important;
+		}
+		@media (max-width: 767px){
+			display: none;
+			padding-left: 10px;
+			padding-right: 10px;
+			clear: fix;
+			margin-bottom: 20px;
+		}
+		@nest &_show{
+			@media (max-width: 767px){
+				display: block !important;
+				text-align: center;
+			}
+		}
+		@nest &-btn{
+			background: #f5f2eb;
+			line-height: 45px;
+			width: 100%;
+			border: 0;
+			outline: none;
+			color: #79674b;
+			text-transform: uppercase;
+			margin-bottom: 3px;
+			display: none;
+			position: relative;
+			@media (max-width: 767px){
+				display: block;
+			}
+			@nest & .filter__arrow{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			@nest &_active{
+				color: var(--mainColor);
+				@nest & .filter__arrow{
+					@nest &:before{
+						opacity: 0;
+					}
+					@nest &:after{
+						opacity: 1;
+					}
+				}
+			}
+		}
 	}
 	@nest &__item{
 		margin-top: 3px !important;
+		@media (max-width: 767px){
+			float: left;
+			width: 50%;
+			font-size: 13px;
+			margin-top: 20px !important;
+		}
 		@nest & label{
 			font-weight: 400;
 		}
 		@nest & .filter__item{
 			margin-top: 2px !important;
 			font-size: 14px;
+			width: 100%;
+			float: none;
+		}
+		@nest & .filter__arrow{
+			display: none;
 		}
 		@nest &_disabled{
 			opacity: 0.5;
@@ -47,12 +151,18 @@
 				background: resolve('checkbox.png');
 				width: width('checkbox.png');
 				height: height('checkbox.png');
+				@media (max-width: 767px){
+					top: 2px;
+				}
 			}
 			@nest &:after{
 				background: resolve('checkbox_active.png');
 				width: width('checkbox_active.png');
 				height: height('checkbox_active.png');
 				top: 4px;
+				@media (max-width: 767px){
+					top: 1px;
+				}
 			}
 		}
 		@nest &_radio{
@@ -119,6 +229,9 @@
 		position: relative;
 		opacity: 1;
 		transition: opacity 300ms;
+		@media (max-width: 767px){
+			margin-top: 15px;
+		}
 		@nest &:hover{
 			opacity: 0.6;
 		}
@@ -140,6 +253,24 @@
 			}
 			@nest &:after{
 				opacity: 1;
+			}
+		}
+	}
+	@nest &_open{
+		overflow: auto;
+		@nest & .filter__btn{
+			color: #FF6300;
+			@nest & i{
+				background: resolve('filter_down.png');
+				width: width('filter_down.png');
+				height: height('filter_down.png');
+			}
+			@nest & span{
+				@nest &:before{
+					background: resolve('filter-icon_h.png');
+					width: width('filter-icon_h.png');
+					height: height('filter-icon_h.png');
+				}
 			}
 		}
 	}

@@ -10,5 +10,6 @@
 		headerNavHeight();
 		searchBtnText();
 		adaptiveFooter();
+		fixFilter();
 	});
 });

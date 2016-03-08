@@ -45,8 +45,16 @@
 			}
 		}
 		@nest &_bigline{
+			@media (max-width: 767px){
+				text-align: left;
+			}
 			@nest &:after{
 				width: 307px;
+				@media (max-width: 767px){
+					margin-left: 0;
+					left: 0;
+					width: 150px;
+				}
 			}
 		}
 	}

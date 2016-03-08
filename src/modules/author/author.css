@@ -3,6 +3,11 @@
 	background-color: #f5f3f3;
 	box-shadow: 0 0 7px rgba(24,24,25,.5);
 	margin-bottom: 40px;
+	@media (max-width: 767px){
+		margin-top: 40px;
+		box-shadow: none;
+		border: 1px solid #d6d3cf;
+	}
 	@nest &__top{
 		min-height: 90px;
 		background: #faf4eb;
@@ -11,19 +16,39 @@
 		padding-top: 35px;
 		padding-right: 20px;
 		@media (max-width: 991px){
-			padding-top: 5px;
+			padding-top: 25px;
+		}
+		@media (max-width: 767px){
+			padding-left: 80px;
+			min-height: 43px;
+			padding-top: 7px;
 		}
 	}
 	@nest &__content{
 		padding-left: 30px;
 		padding-bottom: 23px;
 		padding-right: 20px;
+		@media (max-width: 767px){
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 15px;
+		}
 	}
 	@nest &__photo{
 		position: absolute;
 		left: 30px;
 		top: -25px;
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
 		box-shadow: 0 0 7px rgba(24,24,25,.5);
+		@media (max-width: 767px){
+			box-shadow: none;
+			border: 1px solid #d6d3cf;
+			width: 60px;
+			height: 60px;
+			left: 10px;
+		}
 		@nest &:after{
 			content: '';
 			position: absolute;
@@ -34,6 +59,9 @@
 			height: 100%;
 			opacity: 1;
 			transition: opacity 400ms;
+			@media (max-width: 767px){
+				display: none;
+			}
 		}
 	}
 	@nest &__title{
@@ -44,6 +72,10 @@
 		display: inline-block;
 		margin-top: 3px;
 		margin-bottom: 10px;
+		@media (max-width: 767px){
+			font-size: 14.2px;
+			margin-bottom: 5px;
+		}
 		@nest &:hover{
 			color: var(--mainColorHover) !important;
 			text-decoration: none;
@@ -52,11 +84,19 @@
 	@nest &__categories{
 		font-weight: 700;
 		color: #6c5f4a;
+		@media (max-width: 767px){
+			font-size: 9px;
+		}
 		@nest & .preview__category{
 			font-size: 14px;
 			font-weight: 400;
 			color: #8a7a61;
 			margin-bottom: 10px;
+			padding-right: 0;
+			@media (max-width: 767px){
+				font-size: 9px;
+				margin-bottom: 6px;
+			}
 			@nest &:after{
 				display: none;
 			}
@@ -66,6 +106,9 @@
 		@nest &-title{
 			color: #8a7a61;
 			font-size: 15px;
+			@media (max-width: 767px){
+				font-size: 9px;
+			}
 		}
 		@nest &-desc{
 			margin-top: 0;
@@ -74,6 +117,9 @@
 			color: #656564;
 			font-size: 12px;
 			font-style: italic;
+			@media (max-width: 767px){
+				font-size: 9px;
+			}
 		}
 	}
 	@nest &-stats{
@@ -81,6 +127,9 @@
 		font-size: 14px;
 		@media (max-width: 1199px){
 			font-size: 13px;
+		}
+		@media (max-width: 767px){
+			font-size: 9px;
 		}
 		@nest &__side{
 			display: inline-block;
@@ -120,6 +169,11 @@
 					height: height('readers.png');
 					position: relative;
 					top: -1px;
+					@media (max-width: 767px){
+						background: resolve('readers_m.png');
+						width: width('readers_m.png');
+						height: height('readers_m.png');
+					}
 				}
 			}
 			@nest &_publication{
@@ -129,6 +183,11 @@
 					height: height('reviews.png');
 					position: relative;
 					top: -1px;
+					@media (max-width: 767px){
+						background: resolve('reviews_m.png');
+						width: width('reviews_m.png');
+						height: height('reviews_m.png');
+					}
 				}
 			}
 			@nest &_reviews{
@@ -145,6 +204,9 @@
 						margin-bottom: 5px;
 					}
 				}
+				@nest &:before{
+					display: none;
+				}
 			}
 		}
 		@nest &__reviews{
@@ -153,6 +215,9 @@
 			font-weight: 400;
 			@media (max-width: 1199px){
 				margin-left: 5px;
+			}
+			@media (max-width: 767px){
+				margin-left: 2px;
 			}
 			@nest &:after{
 				content: '';
@@ -167,6 +232,10 @@
 					background-repeat: no-repeat;
 					width: 18px;
 					height: 16px;
+					@media (max-width: 767px){
+						width: 8px;
+						height: 8px;
+					}
 				}
 				@media (max-width: 991px){
 					margin-left: 0;
@@ -179,6 +248,10 @@
 					background-repeat: no-repeat;
 					width: 19px;
 					height: 16px;
+					@media (max-width: 767px){
+						width: 8px;
+						height: 8px;
+					}
 				}
 			}
 		}

@@ -7,6 +7,11 @@
 		color: #8a7a61;
 		font-size: 14px;
 		position: relative;
+		@media (max-width: 767px){
+			text-align: center;
+			width: 100%;
+			display: table;
+		}
 		@nest &:after{
 			content: '';
 			position: absolute;
@@ -16,6 +21,9 @@
 			right: 0;
 			bottom: 0;
 			z-index: 9;
+			@media (max-width: 767px){
+				display: none;
+			}
 		}
 		@nest & button{
 			border: 0;
@@ -24,20 +32,47 @@
 			line-height: 26px;
 			padding: 0;
 			transition: color 300ms;
+			@media (max-width: 767px){
+				line-height: 34px;
+				color: var(--mainColor);
+				border: 1px solid var(--mainColor);
+				text-align: center;
+				width: 100%;
+			}
 			@nest &:hover{
 				color: var(--mainColor);
 			}
 		}
 		@nest &__item{
 			display: inline-block;
-			margin-left: 20px;
-			padding-right: 20px;
+			padding-right: 25px;
 			position: relative;
 			z-index: 10;
+			@media (max-width: 767px){
+				display: table-cell;
+				width: 1%;
+				padding-right: 8px;
+				font-size: 13.3px;
+			}
 			@nest &_active{
 				@nest & button{
 					color: var(--mainColor);
 					border-bottom: 4px solid var(--mainColor);
+					@media (max-width: 767px){
+						border: 1px solid var(--mainColor);
+						color: #fff;
+						background: var(--mainColor);
+					}
+					@nest &:hover{
+						@media (max-width: 767px){
+							color: #fff;
+						}
+					}
+				}
+			}
+			@nest &:last-child{
+				@media (max-width: 767px){
+					padding-right: 0;
 				}
 			}
 		}
@@ -46,6 +81,9 @@
 		opacity: 0;
 		transition: opacity 300ms;
 		padding-top: 30px;
+		@media (max-width: 767px){
+			padding-top: 20px;
+		}
 		@nest &_active{
 			opacity: 1;
 		}

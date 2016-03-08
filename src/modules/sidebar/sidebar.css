@@ -1,12 +1,22 @@
 .sidebar{
+	@media (max-width: 767px){
+		display: none;
+	}
 	@nest &__filter{
 		width: 305px;
 		@media (max-width: 991px){
 			width: 205px;
 			padding-right: 20px;
 		}
+		@media (max-width: 767px){
+			padding-right: 0;
+			width: 100%;
+		}
 	}
 	@nest &__section-title{
 		font-size: 26px;
+		@media (max-width: 767px){
+			display: none;
+		}
 	}
 }
