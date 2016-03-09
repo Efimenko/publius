@@ -23,11 +23,17 @@ $('.filter__reset').click(function(){
 $('.filter__btn').click(function(){
 	var fil = $(this).parents('.filter');
 	if (!fil.hasClass('filter_open')) {
-		fil.addClass('filter_open').animate({'top':'100px'});
-
+		if ($(window).height() <= 444) {
+			fil.addClass('filter_open').animate({'top':'100px'});
+		}else{
+			var nTop = $(window).height() - fil.height();
+			fil.addClass('filter_open').animate({'top':nTop});
+		}
+		$('body').addClass('pattern');
 	}else{
 		var nTop = $(window).height() - 57;
 		fil.removeClass('filter_open').animate({'top': nTop});
+		$('body').removeClass('pattern');
 	}
 });
 
@@ -40,11 +46,10 @@ $('.filter__block-btn').click(function(){
 
 function fixFilter(){
 	if ($(window).width() <= 750) {
-		var nHeight = $(window).height() - 100;
 		var nTop = $(window).height() - 57;
-		$('.filter').css('top', nTop).height(nHeight);
+		$('.filter').css('top', nTop);
 	}else{
-		$('.filter').css('top', '').height('');
+		$('.filter').css('top', '');
 	}
 }
 fixFilter();

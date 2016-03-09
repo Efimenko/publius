@@ -11,5 +11,6 @@
 		searchBtnText();
 		adaptiveFooter();
 		fixFilter();
+		logoMini();
 	});
 });

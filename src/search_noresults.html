@@ -1,0 +1,308 @@
+//= template/head_search.html
+	<div class="page-title nomobile">
+		<div class="container">
+			Расширенный поиск
+		</div>
+	</div>
+	<div class="container">
+		<div class="search-wrapper search-wrapper_margin">
+			<form class="search">
+				<input type="text" placeholder="Введите имя автора, название произведения или тег" class="search__field search__field_big" name="search">
+				<button type="submit" class="search__button search__button_center"></button>
+			</form>
+		</div>
+		<!-- begin content__side  -->
+		<div class="content__side content__side_left sidebar">
+			<!-- begin filter  -->
+			<form class="filter sidebar__filter">
+				<button type="button" class="filter__btn"><i></i><span>Фильтры</span></button>
+				<button type="button" class="filter__block-btn">Жанры<i class="filter__arrow"></i></button>
+				<!-- begin filter__block  -->
+				<div class="filter__block">
+					<div class="section-title sidebar__section-title">Жанры</div>
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_withdropdown">
+						<input type="checkbox" id="checkbox1" class="checkbox">
+						<label for="checkbox1" class="filter__label filter__label_checkbox">Фэнтези<i class="filter__arrow"></i></label>
+						<div class="filter__dropdown">
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox2" class="checkbox">
+								<label for="checkbox2" class="filter__label filter__label_checkbox">Фэнтези 1</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox3" class="checkbox">
+								<label for="checkbox3" class="filter__label filter__label_checkbox">Фэнтези 2</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox4" class="checkbox">
+								<label for="checkbox4" class="filter__label filter__label_checkbox">Фэнтези 3</label>
+							</div>
+						</div>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_withdropdown">
+						<input type="checkbox" id="checkbox5" class="checkbox">
+						<label for="checkbox5" class="filter__label filter__label_checkbox">Современная проза<i class="filter__arrow"></i></label>
+						<div class="filter__dropdown">
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox6" class="checkbox">
+								<label for="checkbox6" class="filter__label filter__label_checkbox">Современная русская литература</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox7" class="checkbox">
+								<label for="checkbox7" class="filter__label filter__label_checkbox">Психологическая проза </label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox8" class="checkbox">
+								<label for="checkbox8" class="filter__label filter__label_checkbox">Историческая литература </label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox9" class="checkbox">
+								<label for="checkbox9" class="filter__label filter__label_checkbox">Контркультура 899</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox10" class="checkbox">
+								<label for="checkbox10" class="filter__label filter__label_checkbox">Книги о войне</label>
+							</div>
+							<div class="filter__item filter__item_disabled">
+								<input type="checkbox" id="checkbox11" class="checkbox">
+								<label for="checkbox11" class="filter__label filter__label_checkbox">Документальная литература</label>
+							</div>
+							<div class="filter__item filter__item_disabled">
+								<input type="checkbox" id="checkbox12" class="checkbox">
+								<label for="checkbox12" class="filter__label filter__label_checkbox">Философские и социальные произведения</label>
+							</div>
+						</div>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_withdropdown">
+						<input type="checkbox" id="checkbox13" class="checkbox">
+						<label for="checkbox13" class="filter__label filter__label_checkbox">Фантастика<i class="filter__arrow"></i></label>
+						<div class="filter__dropdown">
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox14" class="checkbox">
+								<label for="checkbox14" class="filter__label filter__label_checkbox">Фантастика 1</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox15" class="checkbox">
+								<label for="checkbox15" class="filter__label filter__label_checkbox">Фантастика 2</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox16" class="checkbox">
+								<label for="checkbox16" class="filter__label filter__label_checkbox">Фантастика 3</label>
+							</div>
+						</div>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_withdropdown">
+						<input type="checkbox" id="checkbox17" class="checkbox">
+						<label for="checkbox17" class="filter__label filter__label_checkbox">Детективы<i class="filter__arrow"></i></label>
+						<div class="filter__dropdown">
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox18" class="checkbox">
+								<label for="checkbox18" class="filter__label filter__label_checkbox">Детективы 1</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox19" class="checkbox">
+								<label for="checkbox19" class="filter__label filter__label_checkbox">Детективы 2</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox20" class="checkbox">
+								<label for="checkbox21" class="filter__label filter__label_checkbox">Детективы 3</label>
+							</div>
+						</div>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_withdropdown">
+						<input type="checkbox" id="checkbox60" class="checkbox">
+						<label for="checkbox60" class="filter__label filter__label_checkbox">Приключения<i class="filter__arrow"></i></label>
+						<div class="filter__dropdown">
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox22" class="checkbox">
+								<label for="checkbox22" class="filter__label filter__label_checkbox">Приключения 1</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox23" class="checkbox">
+								<label for="checkbox23" class="filter__label filter__label_checkbox">Приключения 2</label>
+							</div>
+							<div class="filter__item">
+								<input type="checkbox" id="checkbox24" class="checkbox">
+								<label for="checkbox24" class="filter__label filter__label_checkbox">Приключения 3</label>
+							</div>
+						</div>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_disabled">
+						<input type="checkbox" id="checkbox25" class="checkbox">
+						<label for="checkbox25" class="filter__label filter__label_checkbox">Любовные романы</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item filter__item_disabled">
+						<input type="checkbox" id="checkbox26" class="checkbox">
+						<label for="checkbox26" class="filter__label filter__label_checkbox">Повести, рассказы</label>
+					</div>
+					<!-- end filter__item -->
+				</div>
+				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Доступность книги<i class="filter__arrow"></i></button>
+				<!-- begin filter__block -->
+				<div class="filter__block">
+					<div class="section-title sidebar__section-title">Доступность книги</div>
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio1" name="radio1" class="radio" checked>
+						<label for="radio1" class="filter__label filter__label_radio">Все книги</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio2" name="radio1" class="radio">
+						<label for="radio2" class="filter__label filter__label_radio">Все законченные книги</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio3" name="radio1" class="radio">
+						<label for="radio3" class="filter__label filter__label_radio">Бесплатные книги</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio4" name="radio1" class="radio">
+						<label for="radio4" class="filter__label filter__label_radio">Платные книги</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio5" name="radio1" class="radio">
+						<label for="radio5" class="filter__label filter__label_radio">Бесплатные черновики</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio6" name="radio1" class="radio">
+						<label for="radio6" class="filter__label filter__label_radio">Подписка на черновик</label>
+					</div>
+					<!-- end filter__item -->
+				</div>
+				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Форма произведения<i class="filter__arrow"></i></button>
+				<!-- begin filter__block -->
+				<div class="filter__block">
+					<div class="section-title sidebar__section-title">Форма произведения</div>
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox27" class="checkbox">
+						<label for="checkbox27" class="filter__label filter__label_checkbox">Новелла</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox28" class="checkbox">
+						<label for="checkbox28" class="filter__label filter__label_checkbox">Повесть</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox29" class="checkbox">
+						<label for="checkbox29" class="filter__label filter__label_checkbox">Рассказ</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox30" class="checkbox">
+						<label for="checkbox30" class="filter__label filter__label_checkbox">Роман</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox31" class="checkbox">
+						<label for="checkbox31" class="filter__label filter__label_checkbox">Очерк</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="checkbox" id="checkbox32" class="checkbox">
+						<label for="checkbox32" class="filter__label filter__label_checkbox">Эссе</label>
+					</div>
+					<!-- end filter__item -->
+				</div>
+				<!-- end filter__block -->
+				<button type="button" class="filter__block-btn">Популярность автора<i class="filter__arrow"></i></button>
+				<!-- begin filter__block -->
+				<div class="filter__block">
+					<div class="section-title sidebar__section-title">Популярность автора</div>
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio7" name="radio2" class="radio" checked>
+						<label for="radio7" class="filter__label filter__label_radio">Все авторы</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio8" name="radio2" class="radio">
+						<label for="radio8" class="filter__label filter__label_radio">До 50 читателей</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio9" name="radio2" class="radio">
+						<label for="radio9" class="filter__label filter__label_radio">До 150 читателей</label>
+					</div>
+					<!-- end filter__item -->
+					<!-- begin filter__item -->
+					<div class="filter__item">
+						<input type="radio" id="radio10" name="radio2" class="radio">
+						<label for="radio10" class="filter__label filter__label_radio">Более 200 читателей</label>
+					</div>
+					<!-- end filter__item -->
+				</div>
+				<!-- end filter__block -->
+				<!-- begin filter__block -->
+				<div class="filter__block filter__block_show">
+					<button class="filter__reset" type="button">Сбросить фильтры</button>
+				</div>
+				<!-- end filter__block -->
+			</form>
+			<!-- end filter -->
+		</div>
+		<!-- end content__side -->
+		<!-- begin content__main  -->
+		<div class="content__main">
+			<div class="search-results">
+				<div class="tabs">
+					<ul class="tabs-list">
+						<li class="tabs-list__item tabs-list__item_active"><button type="button" data-content="content1">Все подряд</button></li>
+						<li class="tabs-list__item"><button type="button" data-content="content2">Авторы</button></li>
+						<li class="tabs-list__item"><button type="button" data-content="content3">Книги</button></li>
+					</ul>
+					<div class="tabs__content tabs__content_active" id="content1">
+						<div class="search-noresults">
+							<div class="search-noresults__title">Извините, поиск не дал результатов.</div>
+							<p class="search-noresults__desc">По данному запросу пока нет ни одной книги.<br>Может, попробуете <a href="#">написать свою</a>?</p>
+						</div>
+					</div>
+					<div class="tabs__content" id="content2">
+						<div class="search-noresults">
+							<div class="search-noresults__title">Извините, поиск не дал результатов.</div>
+							<p class="search-noresults__desc">По данному запросу пока нет ни одной книги.<br>Может, попробуете <a href="#">написать свою</a>?</p>
+						</div>
+					</div>
+					<div class="tabs__content" id="content3">
+						<div class="search-noresults">
+							<div class="search-noresults__title">Извините, поиск не дал результатов.</div>
+							<p class="search-noresults__desc">По данному запросу пока нет ни одной книги.<br>Может, попробуете <a href="#">написать свою</a>?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end content__main -->
+	</div>
+//= template/footer.html

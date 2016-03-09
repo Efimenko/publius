@@ -7,4 +7,9 @@
 	@media (max-width: 767px){
 		width: 99px;
 	}
+	@nest &_mini{
+		@media (max-width: 767px){
+			width: 34px;
+		}
+	}
 }

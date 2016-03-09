@@ -1,7 +1,4 @@
 .header{
-	// padding-left: 25px;
-	// padding-right: 25px;
-	// min-height: 108px;
 	background: var(--bgColor);
 	padding-top: 25px;
 	padding-bottom: 27px;
@@ -35,6 +32,28 @@
 			margin-top: 10px;
 			margin-bottom: 13px;
 			margin-left: 15px;
+		}
+	}
+	@nest &__back{
+		font-size: 18px;
+		color: #8a7a61 !important;
+		text-transform: uppercase;
+		float: left;
+		margin-top: 12px;
+		@nest &:before{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			background: resolve('left.svg');
+			background-repeat: no-repeat;
+			margin-right: 7px;
+			width: 5px;
+			height: 9px;
+			position: relative;
+			top: -2px;
+		}
+		@nest &:hover{
+			text-decoration: none;
 		}
 	}
 	@nest &__nav{
