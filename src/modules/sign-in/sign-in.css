@@ -1,0 +1,285 @@
+.sign-in{
+	padding-top: 120px;
+	background: resolve('sign.png') no-repeat center top;
+	@media (max-width: 767px){
+		padding-top: 27px;
+		background: transparent;
+	}
+	@nest &__wrapper{
+		margin: auto;
+		width: 540px;
+		background: #faf4eb;
+		padding: 25px 50px 40px;
+		position: relative;
+		@media (max-width: 991px){
+			width: 360px;
+		}
+		@media (max-width: 767px){
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 0;
+			background: transparent;
+			width: 290px;
+		}
+	}
+	@nest &__field-wrapper{
+		margin-bottom: 8px;
+		@media (max-width: 767px){
+			margin-bottom: 21px;
+		}
+		@nest & .field{
+			@media (max-width: 767px){
+				text-align: center;
+				font-size: 12.8px;
+			}
+		}
+	}
+	@nest &__label{
+		display: block;
+		text-align: center;
+		color: #aca395;
+		font-weight: 400;
+		font-size: 19px;
+		@media (max-width: 767px){
+			display: none;
+		}
+		@nest &_visible{
+			@media (max-width: 767px){
+				display: block;
+				font-size: 12.8px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	@nest &__captcha{
+		width: 304px;
+		margin: 26px auto 23px;
+		@media (max-width: 991px){
+			margin-left: -20px;
+		}
+		@media (max-width: 767px){
+			margin-left: -26px;
+			margin-top: 13px;
+			margin-bottom: 20px;
+		}
+		@nest &_bigmar{
+			margin-top: 40px;
+			@media (max-width: 767px){
+				margin-top: 13px;
+			}
+		}
+	}
+	@nest &__btn{
+		font-size: 35px;
+		line-height: 77px;
+		padding: 0px 30px;
+		min-width: 290px;
+		@media (max-width: 991px){
+			min-width: 180px;
+			font-size: 22px;
+			line-height: 60px;
+		}
+		@media (max-width: 767px){
+			font-size: 21px;
+			line-height: 50px;
+		}
+	}
+	@nest &__alternative{
+		text-align: center;
+		padding-top: 40px;
+		font-size: 18px;
+		color: #aca395;
+		@media (max-width: 767px){
+			font-size: 10.6px;
+			padding-top: 20px;
+		}
+		@nest & a{
+			color: var(--mainColor) !important;
+			transition: color 300ms;
+			text-decoration: underline;
+			display: inline-block;
+			margin-top: 2px;
+			@nest &:hover{
+				color: var(--mainColorHover) !important;
+				text-decoration: none;
+			}
+		}
+		@nest & br{
+			@media (max-width: 767px){
+				display: none;
+			}
+		}
+	}
+	@nest &-social{
+		position: absolute;
+		top: 0;
+		left: -57px;
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		@media (max-width: 767px){
+			position: static;
+			text-align: center;
+			font-size: 0;
+		}
+		@nest &__item{
+			width: 50px;
+			height: 50px;
+			margin-bottom: 7px;
+			position: relative;
+			transition: background 300ms;
+			@media (max-width: 767px){
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				margin-right: 11px;
+				margin-bottom: 0;
+			}
+			@nest &:last-child{
+				@media (max-width: 767px){
+					margin-right: 0;
+				}
+			}
+			@nest &:after{
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			@nest & a{
+				display: block;
+				height: 100%;
+			}
+			@nest &_header{
+				background: #faf4eb;
+				width: 57px;
+				@media (max-width: 767px){
+					display: none;
+				}
+				@nest &:after{
+					background: resolve('logo-m.png');
+					width: width('logo-m.png');
+					height: height('logo-m.png');
+					margin-top: -calc(height('logo-m.png') / 2);
+					margin-left: -calc(width('logo-m.png') / 2);
+				}
+			}
+			@nest &_vk{
+				background: #4081ca;
+				@nest &:hover{
+					background: #529ef3;
+				}
+				@nest &:after{
+					background: resolve('vk.png');
+					width: width('vk.png');
+					height: height('vk.png');
+					margin-top: -calc(height('vk.png') / 2);
+					margin-left: -calc(width('vk.png') / 2);
+					@media (max-width: 767px){
+						background: resolve('vk_m.png');
+						width: width('vk_m.png');
+						height: height('vk_m.png');
+						margin-top: -calc(height('vk_m.png') / 2);
+						margin-left: -calc(width('vk_m.png') / 2);
+					}
+				}
+			}
+			@nest &_gg{
+				background: #d53f17;
+				@nest &:hover{
+					background: #fa4617;
+				}
+				@nest &:after{
+					background: resolve('gg.png');
+					width: width('gg.png');
+					height: height('gg.png');
+					margin-top: -calc(height('gg.png') / 2);
+					margin-left: -calc(width('gg.png') / 2);
+					@media (max-width: 767px){
+						background: resolve('gg_m.png');
+						width: width('gg_m.png');
+						height: height('gg_m.png');
+						margin-top: -calc(height('gg_m.png') / 2);
+						margin-left: -calc(width('gg_m.png') / 2);
+					}
+				}
+			}
+			@nest &_fb{
+				background: #4b66a0;
+				@nest &:hover{
+					background: #5e84d7;
+				}
+				@nest &:after{
+					background: resolve('fb.png');
+					width: width('fb.png');
+					height: height('fb.png');
+					margin-top: -calc(height('fb.png') / 2);
+					margin-left: -calc(width('fb.png') / 2);
+					@media (max-width: 767px){
+						background: resolve('fb_m.png');
+						width: width('fb_m.png');
+						height: height('fb_m.png');
+						margin-top: -calc(height('fb_m.png') / 2);
+						margin-left: -calc(width('fb_m.png') / 2);
+					}
+				}
+			}
+			@nest &_ya{
+				background: #e7322b;
+				@nest &:hover{
+					background: #ff514a;
+				}
+				@nest &:after{
+					background: resolve('ya.png');
+					width: width('ya.png');
+					height: height('ya.png');
+					margin-top: -calc(height('ya.png') / 2);
+					margin-left: -calc(width('ya.png') / 2);
+					@media (max-width: 767px){
+						background: resolve('ya_m.png');
+						width: width('ya_m.png');
+						height: height('ya_m.png');
+						margin-top: -calc(height('ya_m.png') / 2);
+						margin-left: -calc(width('ya_m.png') / 2);
+					}
+				}
+			}
+		}
+	}
+	@nest &__or{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+		position: relative;
+		@nest &:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background: #eae6e0;
+			top: 53%;
+			z-index: 5;
+		}
+		@nest & span{
+			color: #8d7d65;
+			font-size: 12.8px;
+			background: #f1eee9;
+			padding-left: 5px;
+			padding-right: 5px;
+			display: inline-block;
+			position: relative;
+			z-index: 10;
+		}
+	}
+	@nest &__checkbox{
+		margin-bottom: 23px;
+		@media (max-width: 767px){
+			display: none;
+		}
+		@nest & .filter__label{
+			color: #aca395;
+			font-size: 19px;
+		}
+	}
+}

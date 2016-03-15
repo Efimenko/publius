@@ -16,4 +16,13 @@
 		color: #fff;
 		outline: none !important;
 	}
+	@nest &_disabled{
+		cursor: default;
+		background: #6f5732;
+		@nest &:--hover{
+			background: #6f5732;
+			color: #fff;
+			box-shadow: 0 0 7px rgba(24,24,25,.5);
+		}
+	}
 }

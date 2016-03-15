@@ -151,6 +151,9 @@ a:focus, a:active{
 			display: block;
 			padding-bottom: 30px;
 		}
+		@nest &_nosidebar{
+			display: block;
+		}
 	}
 	@nest &_forfix{
 		padding-top: 108px;
@@ -159,6 +162,12 @@ a:focus, a:active{
 		}
 		@media (max-width: 767px){
 			padding-top: 51px;
+		}
+	}
+	@nest &_nofooter{
+		padding-bottom: 0;
+		@media (max-width: 767px){
+			padding-bottom: 50px;
 		}
 	}
 }

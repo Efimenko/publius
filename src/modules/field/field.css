@@ -1,0 +1,183 @@
+.field{
+	width: 100%;
+	height: 34px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #dbd5ca;
+	outline: none;
+	border: 1px solid transparent;
+	transition: border-color 400ms;
+	position: relative;
+	z-index: 10;
+	@nest &:--hover{
+		border-color: var(--mainColor);
+	}
+	@nest &::placeholder{
+		color: #aca395;
+	}
+	@nest &_big{
+		height: 44px;
+	}
+	@nest &-wrapper{
+		position: relative;
+		@nest &:after{
+			content: '';
+			opacity: 0;
+			transition: opacity 400ms;
+			position: absolute;
+			width: 20px;
+			top: 0;
+			bottom: 0;
+			border-top: 22px solid transparent;
+			border-bottom: 22px solid transparent;
+			border-left: 10px solid transparent;
+			right: 6px;
+			z-index: 11;
+		}
+		@nest &:before{
+			content: '';
+			opacity: 0;
+			transition: opacity 400ms;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 6px;
+			z-index: 11;
+		}
+		@nest &__link{
+			position: absolute;
+			right: 0;
+			bottom: -22px;
+			font-size: 14px;
+			text-decoration: underline;
+			color: var(--mainColor) !important;
+			transition: color 300ms;
+			@media (max-width: 767px){
+				display: none;
+			}
+			@nest &:hover{
+				text-decoration: none;
+				color: var(--mainColorHover) !important;
+			}
+		}
+		@nest &__icon{
+			position: absolute;
+			right: -34px;
+			top: 50%;
+			opacity: 0;
+			transition: opacity 400ms;
+		}
+		@nest &__msg{
+			position: absolute;
+			top: 0;
+			font-size: 14px;
+			color: #fff;
+			background: #b0a28d;
+			line-height: 44px;
+			padding-left: 15px;
+			padding-right: 15px;
+			top: 0;
+			right: 200px;
+			transform: translateX(100%);
+			transition: all 400ms;
+			z-index: 5;
+			white-space: nowrap;
+			@media (max-width: 767px){
+				font-size: 8.9px;
+				line-height: 16px;
+				padding-left: 10px;
+				padding-right: 10px;
+				min-width: 100px;
+				text-align: center;
+				top: auto;
+				bottom: 0;
+				right: 50% !important;
+				transform: translateX(50%);
+			}
+			@nest &:before{
+				content: '';
+				position: absolute;
+				border: 12px solid transparent;
+				border-right: 12px solid #b4a58e;
+				top: 50%;
+				left: -24px;
+				transform: translateY(-50%);
+				@media (max-width: 767px){
+					left: -22px;
+					border-top: 8px solid #b4a58e;
+					border-right: 11px solid #b4a58e;
+					border-bottom: 8px solid transparent;
+					border-left: 11px solid transparent;
+				}
+			}
+			@nest &:after{
+				@media (max-width: 767px){
+					content: '';
+					position: absolute;
+					transform: translateY(-50%);
+					top: 50%;
+					right: -22px;
+					border-top: 8px solid #b4a58e;
+					border-right: 11px solid transparent;
+					border-bottom: 8px solid transparent;
+					border-left: 11px solid #b4a58e;
+				}
+			}
+		}
+		@nest &_bigmar{
+			margin-bottom: 22px !important;
+		}
+		@nest &_error{
+			@nest &:before{
+				opacity: 1;
+				background: #f52525;
+			}
+			@nest &:after{
+				opacity: 1;
+				border-right: 10px solid #f52525;
+			}
+			@nest & .field-wrapper__icon{
+				opacity: 1;
+				background: resolve('error.png');
+				width: width('error.png');
+				height: height('error.png');
+				margin-top: -calc(height('error.png') / 2);
+				@media (max-width: 767px){
+					background: resolve('error_m.png');
+					width: width('error_m.png');
+					height: height('error_m.png');
+					margin-top: -calc(height('error_m.png') / 2);
+					right: 3px;
+					z-index: 20;
+				}
+			}
+		}
+		@nest &_success{
+			@nest &:before{
+				opacity: 1;
+				background: #6eb11f;
+			}
+			@nest &:after{
+				opacity: 1;
+				border-right: 10px solid #6eb11f;
+			}
+			@nest & .field-wrapper__icon{
+				opacity: 1;
+				background: resolve('success.png');
+				width: width('success.png');
+				height: height('success.png');
+				margin-top: -calc(height('success.png') / 2);
+				@media (max-width: 767px){
+					background: resolve('success_m.png');
+					width: width('success_m.png');
+					height: height('success_m.png');
+					margin-top: -calc(height('success_m.png') / 2);
+					right: 3px;
+					z-index: 20;
+				}
+			}
+		}
+		
+	}
+}

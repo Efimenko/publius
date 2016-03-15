@@ -1,12 +1,19 @@
 // установка высоты навигаци в зависимости от меню пользователя
 function headerNavHeight(){
 	if ($(window).width() <= 767) {
-		$('.search-wrapper__btn').width($('.header__nav').width() - $('.header__user').outerWidth() + 15);
-
-		if ($('.header .nav-list').height() > $(window).height()) {
+		if ($('.header__user').length) {
+			$('.search-wrapper__btn').width($('.header__nav').width() - $('.header__user').outerWidth() + 15);
+		}else{
+			$('.search-wrapper__btn').width($('.header__nav').width()-15);
+		}
+		if ($('.header .nav-list').height() > ($(window).height() - 250)) {
 			$('.header .nav').height($(window).height()-51)
 		}else{
-			$('.header .nav').outerHeight($('.header__user').outerHeight() + $('.header .search').height());
+			if ($('.header__user').length) {
+				$('.header .nav').outerHeight($('.header__user').outerHeight() + $('.header .search').height());
+			}else{
+				$('.header .nav').outerHeight($('.header .nav-list').outerHeight() + $('.header .search').height());
+			}
 		}
 	}else{
 		$('.header .nav').height('');

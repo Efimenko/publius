@@ -571,6 +571,7 @@
 			left: -12px;
 			padding: 0;
 			line-height: 0;
+			top: 17px;
 			@media (max-width: 767px){
 				top: auto;
 				bottom: 40px;

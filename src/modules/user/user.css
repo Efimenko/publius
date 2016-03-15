@@ -225,7 +225,7 @@
 					@nest &:before{
 						content: '';
 						display: inline-block;
-						background: resolve('exit.svg');
+						background-image: svg("exit.svg", "[fill]: #8A7A61");
 						background-repeat: no-repeat;
 						width: 14px;
 						height: 16px;
@@ -238,7 +238,7 @@
 					@nest &:after{
 						content: '';
 						position: absolute;
-						background: resolve('exit_h.svg');
+						background-image: svg("exit.svg", "[fill]: #FF6300");
 						background-repeat: no-repeat;
 						width: 14px;
 						height: 16px;
@@ -247,6 +247,9 @@
 						margin-top: -8px;
 						transition: opacity 400ms;
 						opacity: 0;
+						@media (max-width: 767px){
+							margin-top: -11px;
+						}
 					}
 				}
 				@nest &:hover{

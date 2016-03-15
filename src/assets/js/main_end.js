@@ -12,5 +12,7 @@
 		adaptiveFooter();
 		fixFilter();
 		logoMini();
+		initPlaceholders();
+		inputCheck();
 	});
 });

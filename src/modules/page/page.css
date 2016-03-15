@@ -7,5 +7,12 @@
 		text-transform: uppercase;
 		padding-top: 50px;
 		margin-bottom: 45px;
+		@nest &_center{
+			text-align: center;
+		}
 	}
+}
+
+.rc-anchor{
+	border: 0 !important;
 }

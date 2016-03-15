@@ -25,9 +25,11 @@ $('.filter__btn').click(function(){
 	if (!fil.hasClass('filter_open')) {
 		if ($(window).height() <= 444) {
 			fil.addClass('filter_open').animate({'top':'100px'});
+			fil.height($(window).height()-100);
 		}else{
 			var nTop = $(window).height() - fil.height();
 			fil.addClass('filter_open').animate({'top':nTop});
+			fil.height('');
 		}
 		$('body').addClass('pattern');
 	}else{

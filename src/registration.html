@@ -1,0 +1,56 @@
+//= template/head_registration.html
+	<div class="page-title page-title_center nomobile">
+		<div class="container">
+			Регистрация
+		</div>
+	</div>
+	<div class="container">
+		<!-- begin content__main  -->
+		<div class="content__main content__main_nosidebar">
+			<!-- begin sign-in  -->
+			<div class="sign-in">
+				<!-- begin sign-in__wrapper  -->
+				<div class="sign-in__wrapper">
+					<!-- begin sign-in__social  -->
+					<ul class="sign-in-social">
+						<li class="sign-in-social__item sign-in-social__item_header"></li>
+						<li class="sign-in-social__item sign-in-social__item_vk"><a href="#"></a></li>
+						<li class="sign-in-social__item sign-in-social__item_gg"><a href="#"></a></li>
+						<li class="sign-in-social__item sign-in-social__item_fb"><a href="#"></a></li>
+						<li class="sign-in-social__item sign-in-social__item_ya"><a href="#"></a></li>
+					</ul>
+					<!-- end sign-in__social -->
+					<div class="sign-in__or mobile"><span>или</span></div>
+					<!-- begin form sign-in__form -->
+					<form class="form sign-in__form">
+						<label for="input1" class="sign-in__label">Email</label>
+						<div class="field-wrapper sign-in__field-wrapper">
+							<input type="email" id="input1" class="field field_big field_email required">
+						</div>
+						<label for="input2" class="sign-in__label">Пароль</label>
+						<div class="field-wrapper sign-in__field-wrapper">
+							<input type="password" id="input2" class="field field_big field_password required">
+						</div>
+						<label for="input3" class="sign-in__label">Имя и фамилия</label>
+						<div class="field-wrapper sign-in__field-wrapper">
+							<input type="text" id="input3" class="field field_big field_name required">
+						</div>
+						<div class="g-recaptcha sign-in__captcha" data-theme="light" data-sitekey="6LdgexoTAAAAAO64mvJX6KhW9OIJh-21Mzbj3hHt"></div>
+						<div class="text-center">
+							<button class="btn btn_disabled sign-in__btn" type="submit">зарегистрироваться</button>
+						</div>
+						<div class="sign-in__alternative">
+							или <br>
+							<a href="#">Войти в существующий аккаунт</a>
+						</div>
+					</form>
+					<!-- end form sign-in__form -->
+				</div>
+				<!-- end sign-in__wrapper -->
+			</div>
+			<!-- end sign-in -->
+		</div>
+		<!-- end content__main -->
+	</div>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+//= template/footer.html

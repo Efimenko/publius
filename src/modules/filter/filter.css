@@ -164,6 +164,28 @@
 					top: 1px;
 				}
 			}
+			@nest &-big{
+				@nest &:before{
+					top: 4px;
+					left: -7px;
+					background: resolve('checkbox_b.png');
+					width: width('checkbox_b.png');
+					height: height('checkbox_b.png');
+					@media (max-width: 767px){
+						top: 2px;
+					}
+				}
+				@nest &:after{
+					left: -8px;
+					background: resolve('checkbox_active_b.png');
+					width: width('checkbox_active_b.png');
+					height: height('checkbox_active_b.png');
+					top: 3px;
+					@media (max-width: 767px){
+						top: 1px;
+					}
+				}
+			}
 		}
 		@nest &_radio{
 			padding-left: 30px;

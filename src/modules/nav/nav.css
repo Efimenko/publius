@@ -12,6 +12,7 @@
 		color: #8a7a61;
 		@media (max-width: 767px){
 			padding-top: 25px;
+			padding-bottom: 1px;
 		}
 		@nest &__item{
 			display: inline-block;
